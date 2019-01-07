@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang = "en">
+
+<head>
+
+<link rel="shortcut icon" href="https://introcs.cs.princeton.edu/favicon.ico">
+<link rel="stylesheet"    href="https://introcs.cs.princeton.edu/java.css" type="text/css">
+
+<title>Gambler.java</title>
+
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta NAME="AUTHOR" CONTENT="Robert Sedgewick and Kevin Wayne">
+<meta NAME="DESCRIPTION" CONTENT="Gambler code in Java">
+<meta NAME="TITLE" CONTENT="Gambler code in Java">
+<meta NAME="KEYWORDS" CONTENT="Gambler,java,programming,computer science,algorithm,program,code">
+<meta NAME="ROBOTS" CONTENT="INDEX,FOLLOW">
+
+</head>
+
+
+<body>
+<center><h1>Gambler.java</h1></center><p><br>
+
+Below is the syntax highlighted version of <a href = "Gambler.java">Gambler.java</a>
+from <a href = "https://introcs.cs.princeton.edu/java/13flow">&#167;1.3 Conditionals and Loops</a>.
+<p><br>
+
+<!-- Generator: GNU source-highlight 3.1.6
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span class="comment">/******************************************************************************</span>
+<span class="comment"> *  Compilation:  javac Gambler.java</span>
+<span class="comment"> *  Execution:    java Gambler stake goal N</span>
+<span class="comment"> *  </span>
+<span class="comment"> *  Simulates a gambler who start with $stake and place fair $1 bets</span>
+<span class="comment"> *  until she goes broke or reach $goal. Keeps track of the number of</span>
+<span class="comment"> *  times she wins and the number of bets she makes. Run the experiment N</span>
+<span class="comment"> *  times, averages the results, and prints them out.</span>
+<span class="comment"> *</span>
+<span class="comment"> *  % java Gambler 50 250 1000</span>
+<span class="comment"> *  178 wins of 1000</span>
+<span class="comment"> *  Percent of games won = 17.8</span>
+<span class="comment"> *  Avg # bets           = 10010.79</span>
+<span class="comment"> *</span>
+<span class="comment"> *  % java Gambler 50 150 1000</span>
+<span class="comment"> *  337 wins of 1000</span>
+<span class="comment"> *  Percent of games won = 33.7</span>
+<span class="comment"> *  Avg # bets           = 4863.95</span>
+<span class="comment"> * </span>
+<span class="comment"> *  % java Gambler 50 100 1000</span>
+<span class="comment"> *  503 wins of 1000</span>
+<span class="comment"> *  Percent of games won = 50.3</span>
+<span class="comment"> *  Avg # bets           = 2464.59</span>
+<span class="comment"> *</span>
+<span class="comment"> ******************************************************************************/</span>
+
+<span class="keyword">public</span><span class="normal"> </span><span class="keyword">class</span><span class="normal"> </span><span class="classname">Gambler</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span>
+
+<span class="normal">    </span><span class="keyword">public</span><span class="normal"> </span><span class="keyword">static</span><span class="normal"> </span><span class="type">void</span><span class="normal"> </span><span class="function">main</span><span class="symbol">(</span><span class="normal">String</span><span class="symbol">[]</span><span class="normal"> args</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">        </span><span class="type">int</span><span class="normal"> stake  </span><span class="symbol">=</span><span class="normal"> Integer</span><span class="symbol">.</span><span class="function">parseInt</span><span class="symbol">(</span><span class="normal">args</span><span class="symbol">[</span><span class="number">0</span><span class="symbol">]);</span><span class="normal">    </span><span class="comment">// gambler's stating bankroll</span>
+<span class="normal">        </span><span class="type">int</span><span class="normal"> goal   </span><span class="symbol">=</span><span class="normal"> Integer</span><span class="symbol">.</span><span class="function">parseInt</span><span class="symbol">(</span><span class="normal">args</span><span class="symbol">[</span><span class="number">1</span><span class="symbol">]);</span><span class="normal">    </span><span class="comment">// gambler's desired bankroll</span>
+<span class="normal">        </span><span class="type">int</span><span class="normal"> trials </span><span class="symbol">=</span><span class="normal"> Integer</span><span class="symbol">.</span><span class="function">parseInt</span><span class="symbol">(</span><span class="normal">args</span><span class="symbol">[</span><span class="number">2</span><span class="symbol">]);</span><span class="normal">    </span><span class="comment">// number of trials to perform</span>
+
+<span class="normal">        </span><span class="type">int</span><span class="normal"> bets </span><span class="symbol">=</span><span class="normal"> </span><span class="number">0</span><span class="symbol">;</span><span class="normal">        </span><span class="comment">// total number of bets made</span>
+<span class="normal">        </span><span class="type">int</span><span class="normal"> wins </span><span class="symbol">=</span><span class="normal"> </span><span class="number">0</span><span class="symbol">;</span><span class="normal">        </span><span class="comment">// total number of games won</span>
+
+<span class="normal">        </span><span class="comment">// repeat trials times</span>
+<span class="normal">        </span><span class="keyword">for</span><span class="normal"> </span><span class="symbol">(</span><span class="type">int</span><span class="normal"> t </span><span class="symbol">=</span><span class="normal"> </span><span class="number">0</span><span class="symbol">;</span><span class="normal"> t </span><span class="symbol">&lt;</span><span class="normal"> trials</span><span class="symbol">;</span><span class="normal"> t</span><span class="symbol">++)</span><span class="normal"> </span><span class="cbracket">{</span>
+
+<span class="normal">            </span><span class="comment">// do one gambler's ruin simulation</span>
+<span class="normal">            </span><span class="type">int</span><span class="normal"> cash </span><span class="symbol">=</span><span class="normal"> stake</span><span class="symbol">;</span>
+<span class="normal">            </span><span class="keyword">while</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">cash </span><span class="symbol">&gt;</span><span class="normal"> </span><span class="number">0</span><span class="normal"> </span><span class="symbol">&amp;&amp;</span><span class="normal"> cash </span><span class="symbol">&lt;</span><span class="normal"> goal</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">                bets</span><span class="symbol">++;</span>
+<span class="normal">                </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">Math</span><span class="symbol">.</span><span class="function">random</span><span class="symbol">()</span><span class="normal"> </span><span class="symbol">&lt;</span><span class="normal"> </span><span class="number">0.5</span><span class="symbol">)</span><span class="normal"> cash</span><span class="symbol">++;</span><span class="normal">     </span><span class="comment">// win $1</span>
+<span class="normal">                </span><span class="keyword">else</span><span class="normal">                     cash</span><span class="symbol">--;</span><span class="normal">     </span><span class="comment">// lose $1</span>
+<span class="normal">            </span><span class="cbracket">}</span>
+<span class="normal">            </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">cash </span><span class="symbol">==</span><span class="normal"> goal</span><span class="symbol">)</span><span class="normal"> wins</span><span class="symbol">++;</span><span class="normal">                </span><span class="comment">// did gambler go achieve desired goal?</span>
+<span class="normal">        </span><span class="cbracket">}</span>
+
+<span class="normal">        </span><span class="comment">// print results</span>
+<span class="normal">        System</span><span class="symbol">.</span><span class="normal">out</span><span class="symbol">.</span><span class="function">println</span><span class="symbol">(</span><span class="normal">wins </span><span class="symbol">+</span><span class="normal"> </span><span class="string">" wins of "</span><span class="normal"> </span><span class="symbol">+</span><span class="normal"> trials</span><span class="symbol">);</span>
+<span class="normal">        System</span><span class="symbol">.</span><span class="normal">out</span><span class="symbol">.</span><span class="function">println</span><span class="symbol">(</span><span class="string">"Percent of games won = "</span><span class="normal"> </span><span class="symbol">+</span><span class="normal"> </span><span class="number">100.0</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> wins </span><span class="symbol">/</span><span class="normal"> trials</span><span class="symbol">);</span>
+<span class="normal">        System</span><span class="symbol">.</span><span class="normal">out</span><span class="symbol">.</span><span class="function">println</span><span class="symbol">(</span><span class="string">"Avg # bets           = "</span><span class="normal"> </span><span class="symbol">+</span><span class="normal"> </span><span class="number">1.0</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> bets </span><span class="symbol">/</span><span class="normal"> trials</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="cbracket">}</span>
+
+<span class="cbracket">}</span>
+</tt></pre>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10811519-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+
+<p><br><address><small>
+Copyright &copy; 2000&ndash;2017, Robert Sedgewick and Kevin Wayne.
+<br>Last updated: Fri Oct 20 14:12:12 EDT 2017.
+</small></address>
+
+</html>
+øÚÃþY      \2û\2û?èVô\<5š   ?    :https://introcs.cs.princeton.edu/java/13flow/Gambler.java.html necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Mon, 07 Jan 2019 07:09:16 GMT
+Server: Apache/2.4.27 (Springdale) OpenSSL/1.0.1e-fips mod_fcgid/2.3.9 PHP/5.6.25 Phusion_Passenger/4.0.50
+Last-Modified: Fri, 20 Oct 2017 18:13:09 GMT
+ETag: "29bf-55bfe6cd4bfb8"
+Accept-Ranges: bytes
+Content-Length: 10687
+Content-Type: text/html; charset=UTF-8
+ original-response-headers Date: Mon, 07 Jan 2019 07:09:16 GMT
+Server: Apache/2.4.27 (Springdale) OpenSSL/1.0.1e-fips mod_fcgid/2.3.9 PHP/5.6.25 Phusion_Passenger/4.0.50
+Last-Modified: Fri, 20 Oct 2017 18:13:09 GMT
+ETag: "29bf-55bfe6cd4bfb8"
+Accept-Ranges: bytes
+Content-Length: 10687
+Content-Type: text/html; charset=UTF-8
+Keep-Alive: timeout=5, max=99
+Connection: Keep-Alive
+ uncompressed-len 0 predictor::resource-count 2 predictor::https://introcs.cs.princeton.edu/java.css 1,1,1546844956,4097 net-response-time-onstart 1742 net-response-time-onstop 1950 predictor::https://ssl.google-analytics.com/ga.js 1,1,1546844956,4096   )¿

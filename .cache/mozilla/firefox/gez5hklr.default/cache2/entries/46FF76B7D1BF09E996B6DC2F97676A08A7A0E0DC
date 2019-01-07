@@ -1,0 +1,252 @@
+Ôªø<!DOCTYPE html>
+<html lang="en" class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="robots" content="noindex">
+					<link rel="stylesheet" href="https://cdn.funcaptcha.com/fc/gc/css/fc-meta-10-2.css" type="text/css">
+						<style> @font-face { font-family: 'icomoon'; src:url('https://cdn.funcaptcha.com/fc/gc/css/fonts3/icomoon.eot?fqkr7d'); src:url('https://cdn.funcaptcha.com/fc/gc/css/fonts3/icomoon.eot?#iefixfqkr7d') format('embedded-opentype'), url('https://cdn.funcaptcha.com/fc/gc/css/fonts3/icomoon.woff?fqkr7d') format('woff'), url('https://cdn.funcaptcha.com/fc/gc/css/fonts3/icomoon.ttf?fqkr7d') format('truetype'), url('https://cdn.funcaptcha.com/fc/gc/css/fonts3/icomoon.svg?fqkr7d#icomoon') format('svg'); font-weight: normal; font-style: normal; } </style>
+			</head>
+
+	<body class="">
+		<div class="main-ctn" style="display:none" tabindex="0"	aria-label="Visual challenge. Screen reader users should use the audio challenge below.">
+		<div class="loader-ctn">
+			<div class="fc-loader">
+				<svg version="1.1" id="svg-fc-spinner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					viewBox="0 0 30 30" style="enable-background:new 0 0 30 30; display:none" xml:space="preserve">
+						<g id="XMLID_1_">
+							<path id="XMLID_14_" class="svg-fc-style-loader" d="M15,2c0,0,0.1,0,0.1,0c0,0,0,0,0.1,0l0.1,0l0,0l0,0c0.1,0,0.2,0.1,0.2,0.1l1.3,0.7l3.9,2.3
+								l5.3,3.1c0.3,0.2,0.4,0.4,0.4,0.8v12.1l0,0l0,0.1l0,0l0,0c0,0.1-0.1,0.3-0.2,0.4c-0.1,0.1-0.2,0.2-0.3,0.2l-10.5,6.1
+								C15.3,28,15.2,28,15,28c-0.1,0-0.1,0-0.2,0l-0.1,0c-0.1,0-0.2-0.1-0.2-0.1l-1.3-0.7L9.6,25l-5.5-3.2c-0.3-0.2-0.4-0.4-0.4-0.8V8.9
+								l0,0l0-0.1l0-0.1l0,0c0-0.1,0.1-0.3,0.2-0.4C3.9,8.3,4,8.2,4.1,8.2l10.5-6.1C14.7,2,14.8,2,15,2 M15,0c-0.5,0-1,0.1-1.4,0.4
+								L3.1,6.4C2.7,6.6,2.4,6.9,2.2,7.2C1.9,7.6,1.7,8,1.7,8.5c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2v12.1v0
+								c0,1,0.5,2,1.4,2.5l5.5,3.2l3.7,2.1v0l1.3,0.7c0.2,0.1,0.4,0.2,0.6,0.2c0,0,0.1,0,0.1,0c0,0,0,0,0,0C14.5,30,14.8,30,15,30
+								c0.5,0,1-0.1,1.4-0.4l10.5-6.1c0.3-0.2,0.6-0.4,0.8-0.7c0.3-0.4,0.5-0.8,0.6-1.3c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2
+								v0V8.9c0-1-0.5-2-1.4-2.5l-5.3-3.1l-3.9-2.3l-1.3-0.7c-0.2-0.1-0.4-0.2-0.6-0.2c0,0-0.1,0-0.1,0c0,0,0,0,0,0
+								c-0.1,0-0.2-0.1-0.4-0.1C15.2,0,15.1,0,15,0L15,0z"/>
+						</g>
+				</svg>
+			</div>
+			<p class="load-txt" style="display:none" dir="ltr" aria-label="Working, please wait..." tabindex="0">
+				Working, please wait...			</p>
+		</div>
+
+		<div class="upper-ctn" style="display:none">
+			<div class="ctn front" id="ctn-1">
+				<iframe class="wrapper" id="CaptchaFrame"
+						tabindex="-1"
+						aria-hidden="true"
+						src="about:blank"
+						horizontalscrolling="no"
+						verticalscrolling="no"
+						scrolling="no">
+				</iframe>
+			</div>
+				<div class="ctn" id="ctn-2">
+					<iframe class="wrapper" id="CaptchaFrame2"
+							tabindex="-1"
+							aria-hidden="true"
+							src="about:blank"
+							horizontalscrolling="no"
+							verticalscrolling="no"
+							scrolling="no">
+					</iframe>
+				</div>
+				<div id="victoryScreen" class="ctn wrapper hide"></div>
+			</div>
+			<div id="html-verify" style="display:none">
+				<p><strong>Please prove you're not a spammer by doing this quick activity!</strong></p>
+				<a class="fancy_btn" id="html-verify-btn">
+					Verify				</a>
+			</div>
+		</div>
+		<div id="timeout_widget" style="display:none">
+	<span>
+		<p class="title">The connection to a verification server was interrupted. To prove you're not a spammer, please <strong>refresh this page</strong>.</p>
+	</span>
+</div>	</div>
+	<div class="audio-ctn">
+	<style>
+			#audio {
+					display:none;
+					width: 300px;
+			}
+			.audio_noauto_support_info {
+					display: none;
+			}
+			#audio_play {
+					display: inline-block;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					margin-left: auto;
+					margin-right: auto;
+			}
+			.audio_btn {
+					margin-left: auto;
+					margin-right: auto;
+			}
+
+			#audio_download {
+					display: inline-block;
+					text-decoration: none;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					margin-left: auto;
+					margin-right: auto;
+			}
+			.audio_commit_info:focus {
+				outline: none;
+			}
+			.audio_info_verify_info {
+					display:none;
+					text-align: center;
+					top: 50%;
+					position: absolute;
+					height: 40px;
+					margin-top: -20px;
+			}
+			#audio_error {
+					display: none;
+			}
+			#audio_error p {
+					color: red !important;
+			}
+			.audio-ctn {
+				position: absolute;
+				top: 1px;
+				left: 1px;
+				right: 1px;
+				bottom: 1px;
+			}
+	</style>
+	<div id="audio">
+		<div id="audio_error">
+				<p></p>
+		</div>
+		<div id="audio_instruction_ctrl" style="display:none">
+			Press CTRL to play again.		</div>
+		<span class="audio_noauto_support_info" id="audio_please_download_info" tabindex="-1">
+			Please download and listen to the sound, then type what you heard:		</span>
+		<span class="audio_info" id="audio_info">
+			Press Play and type what you hear:		</span>
+		<div style="text-align:center">
+				<button class="fancy_btn audio_btn" id="audio_play" style="display:inline-block;"
+						aria-labelledby="audio_error audio_info audio_instruction_ctrl audio_instruction_button"
+						tabindex="0">
+				Play				</button>
+		</div>
+		<div style="text-align:center">
+			<input class="response_field"
+				id="audio_response_field"
+				title="Challenge Answer"
+				aria-labelledby="Challenge Answer"
+				type="text"
+				tabindex="0"
+				autocomplete="off"
+				autocorrect="off"
+				autocapitalize="off"
+				spellcheck="false">
+			</input>
+			<button class="fancy_btn audio_btn" id="audio_submit" tabindex="0">
+					Verify			</button>
+		</div>
+		<div style="text-align:center">
+			<!-- aria-labelledby will NOT get read out by IE -->
+			<button class="fancy_btn" id="audio_download"
+				aria-labelledby="audio_error audio_please_download_info"
+				tabindex="0"
+				onclick="javascript:;"
+			>
+				Download sound			</button>
+		</div>
+	</div>
+	<div id="audio_commit" class="audio_info_verify_info">
+			<p id="audio_commit_text" class="audio_commit_info" tabindex="0" role="alert">Commiting your answer. Please wait...</p>
+	</div>
+	<div id="audio_solve" class="audio_info_verify_info">
+			<p id="audio_solve_text" class="audio_commit_info" tabindex="0" role="alert">Your answer has been committed. Keep doing your thing!</p>
+	</div>
+	<div id="audio_disabled" class="audio_info_verify_info">
+			<p role="alert"></p>
+	</div>
+</div>
+		<div class="infoCtn" style="display:none">
+						<span class="meta_buttons">
+				<a class="helpBtn hide"
+						href="https://www.arkoselabs.com/how-to-solve/?lang=en"
+						hreflang="en"
+						onclick="sendAnalytics('show faqs', 'user clicked faqs')"
+						target="_blank"
+						title="Get answers to your questions"
+						aria-label="Get answers to your questions"
+						tabindex="0"
+						role="button">
+					<span class="fc_meta_help_btn">&#xe601;</span>
+					<!-- <img id="helpBtnImg" src="./images/Help-Icon.png"></img> -->
+				</a>
+
+				<a class="reloadBtn hide"
+						title="Start over with a different game"
+						aria-label="Start over with a different game"
+						tabindex="0"
+						role="button">
+					<span class="fc_meta_reload_btn">&#xe602;</span>
+					<!-- <img id="reloadBtnImg" src="./images/Refresh-Icon.png"></img> -->
+				</a>
+				<a class="audioBtn"
+						title="Change to an audio challenge"
+						aria-label="Audio challenge"
+						tabindex="0"
+						role="button">
+					<span class="fc_meta_audio_btn">&#xe600;</span>
+					<!-- <img id="audioOnBtnImg" src="./images/AudioOn-Icon.png"></img> -->
+				</a>
+				<a class="gameBtn hide"
+						title="Change to a visual challenge"
+						aria-label="Change to a visual challenge"
+						tabindex="0"
+						role="button">
+					<span class="fc_meta_changeback">&#xe604;</span>
+					<!-- <img id="audioOffBtnImg" src="./images/AudioOff-Icon.png"></img> -->
+				</a>
+			</span>
+		</div>
+		<script type='text/javascript'>
+	var lang_obj = {
+						"footer_phone_mode_on" : "This isn't working for me",							"footer_phone_mode_off" : "",							"audio_alert" : "Please enter your answer into the input box.",							"capped_calling_title" : "",							"audio_please_download_info" : "Please download and listen to the sound, then type what you heard:"				}
+</script>
+<script type="text/javascript" src="https://cdn.funcaptcha.com/fc/js/5061eec12302ccb9e1702a5983b56961/standard/meta_bootstrap.js"></script>
+<script type="text/javascript" src="https://cdn.funcaptcha.com/fc/js/5061eec12302ccb9e1702a5983b56961/standard/fc_general.js"></script>	</body>
+</html>
+® ª˚µ      \2˚Å\2ˇß?ËW:      u    :https://api.funcaptcha.com/fc/gc/?token=3435c32fb8124e805.7200789904&r=ap-southeast-1&metabgclr=transparent&maintxtclr=%23cbccce&meta=10&mainbgclr=%23fafbfc&guitextcolor=%2324292e&metaiconclr=%23cbccce&pk=8048609D-F990-23D9-A0AE-3B5F2725AC38&at=40&atp=2&cdn_url=https://cdn.funcaptcha.com/fc&lurl=https://audio-ap-southeast-1.arkoselabs.com&surl=https://api.funcaptcha.com necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/2.0 200 OK
+content-type: text/html; charset=utf-8
+content-length: 8693
+date: Mon, 07 Jan 2019 07:10:57 GMT
+x-amzn-requestid: 614d65c0-124b-11e9-b5c5-bdef4e9ef451
+hackers: www.arkoselabs.com/whitehat/
+sregion: ap-southeast-1
+p3p: CP="IE6COMPAT"
+x-amzn-remapped-connection: keep-alive
+x-amz-apigw-id: THw8PF13SQ0Fh-A=
+x-amzn-remapped-server: Arkose Labs Powered
+x-amzn-remapped-date: Mon, 07 Jan 2019 07:10:57 GMT
+x-cache: Miss from cloudfront
+via: 1.1 b1e07f9510428f387d8a4a0586445768.cloudfront.net (CloudFront)
+x-amz-cf-id: AZnhMO1UQTMcD-s4iq-ubcYCtQ9ApwYoRYwAdCSvdbO7A_ammsMWHg==
+X-Firefox-Spdy: h2
+ original-response-headers content-type: text/html; charset=utf-8
+content-length: 8693
+date: Mon, 07 Jan 2019 07:10:57 GMT
+x-amzn-requestid: 614d65c0-124b-11e9-b5c5-bdef4e9ef451
+hackers: www.arkoselabs.com/whitehat/
+sregion: ap-southeast-1
+p3p: CP="IE6COMPAT"
+x-amzn-remapped-connection: keep-alive
+x-amz-apigw-id: THw8PF13SQ0Fh-A=
+x-amzn-remapped-server: Arkose Labs Powered
+x-amzn-remapped-date: Mon, 07 Jan 2019 07:10:57 GMT
+x-cache: Miss from cloudfront
+via: 1.1 b1e07f9510428f387d8a4a0586445768.cloudfront.net (CloudFront)
+x-amz-cf-id: AZnhMO1UQTMcD-s4iq-ubcYCtQ9ApwYoRYwAdCSvdbO7A_ammsMWHg==
+X-Firefox-Spdy: h2
+ uncompressed-len 0 net-response-time-onstart 298 net-response-time-onstop 301 predictor::resource-count 5 predictor::https://cdn.funcaptcha.com/fc/gc/css/fc-meta-10-2.css 1,1,1546845057,4096 predictor::https://cdn.funcaptcha.com/fc/js/5061eec12302ccb9e1702a5983b56961/standard/meta_bootstrap.js 1,1,1546845057,4097 predictor::https://cdn.funcaptcha.com/fc/js/5061eec12302ccb9e1702a5983b56961/standard/fc_general.js 1,1,1546845057,4097 predictor::https://cdn.funcaptcha.com/fc/gc/css/fonts3/icomoon.woff?fqkr7d 1,1,1546845057,4096 predictor::https://cdn.funcaptcha.com/fc/assets/graphics/github/GitHubSimpleGreenTick2.png 1,1,1546845057,4097   !ı

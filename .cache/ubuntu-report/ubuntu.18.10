@@ -1,0 +1,76 @@
+{
+  "Version": "18.10",
+  "OEM": {
+    "Vendor": "To be filled by O.E.M.",
+    "Product": "To be filled by O.E.M."
+  },
+  "BIOS": {
+    "Vendor": "American Megatrends Inc.",
+    "Version": "4.6.5"
+  },
+  "CPU": {
+    "OpMode": "32-bit, 64-bit",
+    "CPUs": "4",
+    "Threads": "1",
+    "Cores": "4",
+    "Sockets": "1",
+    "Vendor": "GenuineIntel",
+    "Family": "6",
+    "Model": "60",
+    "Stepping": "3",
+    "Name": "Intel(R) Core(TM) i5-4690 CPU @ 3.50GHz",
+    "Virtualization": "VT-x"
+  },
+  "Arch": "amd64",
+  "GPU": [
+    {
+      "Vendor": "8086",
+      "Model": "0412"
+    }
+  ],
+  "RAM": 8.1,
+  "Disks": [
+    320.1
+  ],
+  "Partitions": [
+    306.1,
+    0.5
+  ],
+  "Screens": [
+    {
+      "Size": "0mmx0mm",
+      "Resolution": "1024x768",
+      "Frequency": "60.00"
+    }
+  ],
+  "Autologin": false,
+  "LivePatch": false,
+  "Session": {
+    "DE": "ubuntu:GNOME",
+    "Name": "ubuntu",
+    "Type": "x11"
+  },
+  "Language": "en_IN",
+  "Timezone": "Asia/Kolkata",
+  "Install": {
+    "Media": "Ubuntu 18.10 \"Cosmic Cuttlefish\" - Release amd64 (20181017.3)",
+    "Type": "GTK",
+    "OEM": false,
+    "PartitionMethod": "use_device",
+    "DownloadUpdates": true,
+    "Language": "en",
+    "Minimal": false,
+    "RestrictedAddons": false,
+    "Stages": {
+      "0": "language",
+      "5": "console_setup",
+      "11": "prepare",
+      "15": "partman",
+      "21": "start_install",
+      "39": "timezone",
+      "62": "usersetup",
+      "100": "user_done",
+      "606": "done"
+    }
+  }
+}
